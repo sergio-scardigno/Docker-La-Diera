@@ -7,8 +7,8 @@ services:
             internal_net:
                 ipv4_address: 192.168.54.10 # IP fija dentro del rango de la subred
         volumes:
-            - ./env-files/.env:/var/www/html/.env
             - ./la-diera:/var/www/html
+            - ./env-files-desarrollo/.env:/var/www/html/.env # Mover este mapeo después para evitar sobreescritura
         environment:
             - APP_ENV=local
             - APP_DEBUG=true
